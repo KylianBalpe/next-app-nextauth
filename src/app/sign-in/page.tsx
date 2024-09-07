@@ -13,7 +13,7 @@ export default async function SignInPage() {
 	}
 
 	return (
-		<main className="flex flex-col justify-center items-center gap-2">
+		<main className="flex flex-col justify-center items-center min-h-screen gap-2">
 			<SignInForm />
 			<Link href="/">Home</Link>
 		</main>

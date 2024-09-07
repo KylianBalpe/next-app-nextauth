@@ -18,7 +18,7 @@ export const Header = () => {
 	const { data: session } = useSession();
 
 	return (
-		<header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-12 flex-row justify-between">
+		<header className="absolute w-full top-0 flex h-16 items-center gap-4 border-b bg-background px-12 flex-row justify-between">
 			<nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
 				<Button size="icon" variant="outline" asChild>
 					<Link href="/">
@@ -39,9 +39,7 @@ export const Header = () => {
 							<DropdownMenuLabel>My Account</DropdownMenuLabel>
 							<DropdownMenuSeparator />
 							<DropdownMenuItem>{session.user.name}</DropdownMenuItem>
-							<DropdownMenuItem asChild>
-								<Link href="/settings">Settings</Link>
-							</DropdownMenuItem>
+							<DropdownMenuItem>Settings</DropdownMenuItem>
 							<DropdownMenuSeparator />
 							<DropdownMenuItem onClick={() => signOut()}>
 								Sign Out

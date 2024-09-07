@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SignUpPage() {
 	return (
-		<main className="flex flex-col justify-center items-center gap-2">
+		<main className="flex flex-col justify-center items-center min-h-screen gap-2">
 			<SignUpForm />
 			<Link href="/">Home</Link>
 		</main>
